@@ -9,11 +9,11 @@
         <meta content="ThemeDesign" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="adminResources/images/favicon.ico">
+        <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/images/favicon.ico">
 
-        <link href="adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/icons.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/style.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/style.css" rel="stylesheet" type="text/css">
 
     </head>
 
@@ -30,8 +30,8 @@
                     <div class="text-center">
                         <!--<a href="index.html" class="logo"><span>Up</span>Bond</a>-->
                         <!--<a href="index.html" class="logo-sm"><span>U</span></a>-->
-                        <a href="index.html" class="logo"><img src="adminResources/images/logo.png" height="20" alt="logo"></a>
-                        <a href="index.html" class="logo-sm"><img src="adminResources/images/logo_sm.png" height="30" alt="logo"></a>
+                        <a href="index.html" class="logo"><img src="<%=request.getContextPath()%>/adminResources/images/logo.png" height="20" alt="logo"></a>
+                        <a href="index.html" class="logo-sm"><img src="<%=request.getContextPath()%>/adminResources/images/logo_sm.png" height="30" alt="logo"></a>
                     </div>
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->
@@ -99,7 +99,7 @@
                                 </li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                        <img src="adminResources/images/avatar-1.jpg" alt="user-img" class="img-circle">
+                                        <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="user-img" class="img-circle">
                                                 <span class="profile-username">
                                                     James Grim <span class="caret"></span>
                                                 </span>
@@ -135,7 +135,7 @@
 
                     <div class="user-details">
                         <div class="text-center">
-                            <img src="adminResources/images/avatar-1.jpg" alt="" class="img-circle">
+                            <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="" class="img-circle">
                         </div>
                         <div class="user-info">
                             <div class="dropdown">
@@ -339,7 +339,7 @@
                                                             <div class="cd-timeline-content">
                                                                 <h3>Timeline Event Four</h3>
                                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                                                                <img src="adminResources/images/img1.jpg" alt="">
+                                                                <img src="<%=request.getContextPath()%>/adminResources/images/img1.jpg" alt="">
                                                                 <span class="cd-date">Jun 14</span>
                                                             </div> <!-- cd-timeline-content -->
                                                         </div> <!-- cd-timeline-block -->
@@ -398,19 +398,19 @@
 
 
         <!-- jQuery  -->
-        <script src="adminResources/js/jquery.min.js"></script>
-        <script src="adminResources/js/bootstrap.min.js"></script>
-        <script src="adminResources/js/modernizr.min.js"></script>
-        <script src="adminResources/js/detect.js"></script>
-        <script src="adminResources/js/fastclick.js"></script>
-        <script src="adminResources/js/jquery.slimscroll.js"></script>
-        <script src="adminResources/js/jquery.blockUI.js"></script>
-        <script src="adminResources/js/waves.js"></script>
-        <script src="adminResources/js/wow.min.js"></script>
-        <script src="adminResources/js/jquery.nicescroll.js"></script>
-        <script src="adminResources/js/jquery.scrollTo.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/detect.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/fastclick.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.slimscroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.blockUI.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/waves.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/wow.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.nicescroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.scrollTo.min.js"></script>
 
-        <script src="adminResources/js/app.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/app.js"></script>
 
     </body>
 </html>

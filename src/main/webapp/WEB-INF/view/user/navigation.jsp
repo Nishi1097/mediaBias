@@ -10,21 +10,20 @@
 
                     <div class="user-details">
                         <div class="text-center">
-                            <img src="adminResources/images/avatar-1.jpg" alt="" class="img-circle">
+                            <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="" class="img-circle">
                         </div>
                         <div class="user-info">
                             <div class="dropdown">
-                            	<%@taglib prefix="b" uri="http://java.sun.com/jsp/jstl/core" %>
-                            	<b:forEach items="loginVO" var="i">
+                            	
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Admin <span class="caret"></span></a>
-                                </b:forEach>
+                                
                 
                                 <ul class="dropdown-menu">
                                     <li><a href="javascript:void(0)"> Profile</a></li>
                                     <li><a href="javascript:void(0)"> Settings</a></li>
                                     <li><a href="javascript:void(0)"> Lock screen</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="javascript:void(0)"> Logout</a></li>
+                                    <li><a href="../logout"> Logout</a></li>
                                 </ul>
                             </div>
 
@@ -143,8 +142,10 @@
 							<li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-notepad"></i><span> Feedback Complaint </span><span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="feedback">View Feedback</a></li>
-                                    <li><a href="complaint">View Complaint</a></li>
+                                    <li><a href="userFeedback">Submit Feedback</a></li>
+                                    <li><a href="userFeedbackView">View Feedback</a></li>                                    
+                                    <li><a href="userComplaint">Submit Complaint</a></li>
+                                    <li><a href="userComplaintView">View Complaint</a></li>
                                 </ul>
                             </li>
                             

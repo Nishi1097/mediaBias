@@ -22,9 +22,17 @@ public class LoginDAOImp implements LoginDAO {
 	
 	public List login(LoginVO loginVO){		
 		Session session = this.sessionFactory.getCurrentSession();
-		Query q = session.createQuery("from LoginVO where userName like'"+loginVO.getUserName()+"'and password like '"+loginVO.getPassword()+"' and status = 'active'");
+		Query q = session.createQuery("from LoginVO where userName like'"+loginVO.getUsername()+"'and password like '"+loginVO.getPassword()+"' and status = 'active'");
 		List loginList = q.list();
 		return loginList;
+	}
+	
+
+	@Override
+	public List getUserByUsername(String username) {
+		Session session = this.sessionFactory.getCurrentSession();
+		Query q = session.createQuery("from LoginVO where userName = '"+username+"'");		
+		return q.list();
 	}
 
 }

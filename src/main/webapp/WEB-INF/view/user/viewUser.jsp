@@ -9,19 +9,19 @@
         <meta content="ThemeDesign" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="adminResources/images/favicon.ico">
+        <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/images/favicon.ico">
 
         <!-- DataTables -->
-        <link href="adminResources/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-        <link href="adminResources/css/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="adminResources/css/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="adminResources/css/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="adminResources/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="adminResources/css/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="<%=request.getContextPath()%>/adminResources/css/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-        <link href="adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/icons.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/style.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	
@@ -118,38 +118,38 @@
                    
              
         <!-- jQuery  -->
-        <script src="adminResources/js/jquery.min.js"></script>
-        <script src="adminResources/js/bootstrap.min.js"></script>
-        <script src="adminResources/js/modernizr.min.js"></script>
-        <script src="adminResources/js/detect.js"></script>
-        <script src="adminResources/js/fastclick.js"></script>
-        <script src="adminResources/js/jquery.slimscroll.js"></script>
-        <script src="adminResources/js/jquery.blockUI.js"></script>
-        <script src="adminResources/js/waves.js"></script>
-        <script src="adminResources/js/wow.min.js"></script>
-        <script src="adminResources/js/jquery.nicescroll.js"></script>
-        <script src="adminResources/js/jquery.scrollTo.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/detect.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/fastclick.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.slimscroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.blockUI.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/waves.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/wow.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.nicescroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.scrollTo.min.js"></script>
 
         <!-- Datatables-->
-        <script src="adminResources/js/jquery.dataTables.min.js"></script>
-        <script src="adminResources/js/dataTables.bootstrap.js"></script>
-        <script src="adminResources/js/dataTables.buttons.min.js"></script>
-        <script src="adminResources/js/buttons.bootstrap.min.js"></script>
-        <script src="adminResources/js/jszip.min.js"></script>
-        <script src="adminResources/js/pdfmake.min.js"></script>
-        <script src="adminResources/js/vfs_fonts.js"></script>
-        <script src="adminResources/js/buttons.html5.min.js"></script>
-        <script src="adminResources/js/buttons.print.min.js"></script>
-        <script src="adminResources/js/dataTables.fixedHeader.min.js"></script>
-        <script src="adminResources/js/dataTables.keyTable.min.js"></script>
-        <script src="adminResources/js/dataTables.responsive.min.js"></script>
-        <script src="adminResources/js/responsive.bootstrap.min.js"></script>
-        <script src="adminResources/js/dataTables.scroller.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.bootstrap.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.buttons.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/buttons.bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jszip.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/pdfmake.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/vfs_fonts.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/buttons.html5.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/buttons.print.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.fixedHeader.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.keyTable.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.responsive.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/responsive.bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.scroller.min.js"></script>
 
         <!-- Datatable init js -->
-        <script src="adminResources/js/datatables.init.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/datatables.init.js"></script>
 
-        <script src="adminResources/js/app.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/app.js"></script>
              
 	
 	

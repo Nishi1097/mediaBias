@@ -10,21 +10,20 @@
 
                     <div class="user-details">
                         <div class="text-center">
-                            <img src="adminResources/images/avatar-1.jpg" alt="" class="img-circle">
+                            <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="" class="img-circle">
                         </div>
                         <div class="user-info">
                             <div class="dropdown">
-                            	<%@taglib prefix="b" uri="http://java.sun.com/jsp/jstl/core" %>
-                            	<b:forEach items="loginVO" var="i">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Admin <span class="caret"></span></a>
-                                </b:forEach>
+                            	
+                            	
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Admin <span class="caret"></span></a>                                
                 
                                 <ul class="dropdown-menu">
                                     <li><a href="javascript:void(0)"> Profile</a></li>
                                     <li><a href="javascript:void(0)"> Settings</a></li>
                                     <li><a href="javascript:void(0)"> Lock screen</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="javascript:void(0)"> Logout</a></li>
+                                    <li><a href="../logout"> Logout</a></li>
                                 </ul>
                             </div>
 
@@ -37,7 +36,7 @@
                     <div id="sidebar-menu">
                         <ul>
                             <li>
-                                <a href="index.jsp" class="waves-effect"><i class="ti-home"></i><span> Dashboard <span class="badge badge-primary pull-right"></span></span></a>
+                                <a href="/" class="waves-effect"><i class="ti-home"></i><span> Dashboard <span class="badge badge-primary pull-right"></span></span></a>
                             </li>
                             <!-- <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-bar-chart"></i><span> Charts </span><span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>

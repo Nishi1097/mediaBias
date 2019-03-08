@@ -8,4 +8,6 @@ public interface LoginDAO {
 
 	public List login(LoginVO loginVO);
 
+	public List getUserByUsername(String username);
+
 }

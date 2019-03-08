@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class DataSetController {
 	
-	@RequestMapping(value = "/dataSet" , method = RequestMethod.GET)
+	@RequestMapping(value = "admin/dataSet" , method = RequestMethod.GET)
 	public ModelAndView goToDataSet(){		
 		return new ModelAndView("admin/dataSet");
 	}

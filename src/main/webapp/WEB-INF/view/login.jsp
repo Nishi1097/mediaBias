@@ -20,7 +20,7 @@
 
     <body>
 		
-		<%@taglib prefix="a" uri="http://www.springframework.org/tags/form" %>
+		
 		
 		
         <!-- Begin page -->
@@ -34,17 +34,17 @@
                     </h3>
                     <h4 class="text-muted text-center m-t-0"><b>Sign In</b></h4>
 
-                    <a:form class="form-horizontal m-t-20" action="loginProcess" modelAttribute="loginVO" method="post">
+                    <form class="form-horizontal m-t-20" action="j_spring_security_check"  method="post">
 
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <a:input class="form-control" type="text" required="" placeholder="Username" path="userName"/>
+                                <input class="form-control" type="text" required="" placeholder="Username" name="username">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <a:input class="form-control" type="password" required="" placeholder="Password" path="password"/>
+                                <input class="form-control" type="password" required="" placeholder="Password" name="password">
                             </div>
                         </div>
 
@@ -70,9 +70,9 @@
                                 <a href="recoverPassword.jsp" class="text-muted"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
                             </div>
                             
-                            <!-- <div class="col-sm-5 text-right">
-                                <a href="register.jsp" class="text-muted">Create an account</a>
-                            </div> -->
+                            <div class="col-sm-5 text-right">
+                                <a href="register" class="text-muted">Create an account</a>
+                            </div>
                         </div>
                         
                         <div class="form-group text-center m-t-30">
@@ -80,7 +80,7 @@
                                 <p class="text-danger" >${message}</p>
                             </div>
                         </div>
-                    </a:form>
+                    </form>
                 </div>
 
             </div>

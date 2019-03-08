@@ -9,25 +9,27 @@
         <meta content="ThemeDesign" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="adminResources/images/favicon.ico">
+        <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/images/favicon.ico">
 
         <!-- DataTables -->
-        <link href="adminResources/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-        <link href="adminResources/css/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="adminResources/css/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="adminResources/css/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="adminResources/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="adminResources/css/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<%=request.getContextPath()%>/adminResources/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="<%=request.getContextPath()%>/adminResources/css/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-        <link href="adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/icons.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/style.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/style.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/star.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	
 	 <!-- Begin page -->
         <div id="wrapper">
-
+			<%@taglib prefix="a" uri="http://java.sun.com/jsp/jstl/core" %>
+			<%@taglib prefix = "b" uri = "http://www.springframework.org/tags/form" %>
             <!-- Top Bar Start -->
            		<%@include file = "topbar.jsp"%>
             <!-- Top Bar End -->
@@ -64,22 +66,95 @@
                                                     <table id="datatable" class="table table-striped table-bordered">
                                                         <thead>
                                                         <tr>
-                                                            <th>Name</th>
-                                                            <th>Email</th>
-                                                            <th>Feedback</th>
-                                                            <th>Send Response</th>
+                                                            <th>Userame</th>     
+                                                            <th>Feedback Title</th>                                                       
+                                                            <th>Feedback</th>  
+                                                            <th>Star</th>
+                                                            <th>Feedback Date</th>
+                                                            <th>Feedback time</th>                                                          
+                                                            <th>Delete Response</th>
                                                         </tr>
                                                         </thead>
-
-
+														
                                                         <tbody>
+                                                        <a:forEach items="${feedbackList }" var = "i">
                                                         <tr>
-                                                            <td>Drasti Shah</td>
-                                                            <td>drastis20@gmail.com</td>
-                                                            <td>Blah blah xvcs hvcuy chjvs</td>
-                                                            <td><button class = "btn-success">Respond</button></td>
+                                                            <td>${i.feedbackLoginVO.username }</td>    
+                                                            <td>${i.feedbackTitle }</td>                                                        
+                                                            <td>${i.feedback }</td>
+                                                            <td style = "text-align:'center'">
+                                                            	<a:if test="${i.star == '5' }">
+                                                            		<input type ="radio" class="star star-5 col-sm-1 controls" id="star-5"  value="5" required="required" checked = "checked" disabled = "disabled"/>
+					    											<label class="star star-5 col-sm-1 controls" for="star-5"></label>
+					   												<input type ="radio" class="star star-5 col-sm-1 controls" id="star-4"   value="4"  required="required" disabled = "disabled"/>
+					    											<label class="star star-4 col-sm-1 controls" for="star-4"></label>
+					 												<input type ="radio" class="star star-5 col-sm-1 controls" id="star-3"   value="3"  required="required" disabled = "disabled"/>
+					    											<label class="star star-3 col-sm-1 controls" for="star-3"></label>
+					     											<input type ="radio" class="star star-5 col-sm-1 controls" id="star-2"   value="2"  required="required" disabled = "disabled"/>
+					    											<label class="star star-2 col-sm-1 controls" for="star-2"></label>
+					    											<input type ="radio" class="star star-5 col-sm-1 controls" id="star-1"   value="1"  required="required" disabled = "disabled"/>
+					   										 		<label class="star star-1 col-sm-1 controls" for="star-1"></label>
+                                                            		
+                                                            	</a:if>
+                                                            	<a:if test="${i.star == '4' }">
+                                                            		<input type ="radio" class="star star-5 col-sm-1 controls" id="star-5"   value="5"   required="required" disabled = "disabled"/>
+					    											<label class="star star-5 col-sm-1 controls" for="star-5"></label>
+					   												<input type ="radio" class="star star-5 col-sm-1 controls" id="star-4"   value="4"   required="required" checked = "checked" disabled = "disabled"/>
+					    											<label class="star star-4 col-sm-1 controls" for="star-4"></label>
+					 												<input type ="radio" class="star star-5 col-sm-1 controls" id="star-3"   value="3"   required="required" disabled = "disabled"/>
+					    											<label class="star star-3 col-sm-1 controls" for="star-3"></label>
+					     											<input type ="radio" class="star star-5 col-sm-1 controls" id="star-2"   value="2"   required="required" disabled = "disabled"/>
+					    											<label class="star star-2 col-sm-1 controls" for="star-2"></label>
+					    											<input type ="radio" class="star star-5 col-sm-1 controls" id="star-1"   value="1"   required="required" disabled = "disabled"/>
+					   										 		<label class="star star-1 col-sm-1 controls" for="star-1"></label>
+                                                            		
+                                                            	</a:if>
+                                                            	<a:if test="${i.star == '3' }">
+                                                            		<input type ="radio" class="star star-5 col-sm-1 controls" id="star-5"   value="5"   required="required" disabled = "disabled"/>
+					    											<label class="star star-5 col-sm-1 controls" for="star-5"></label>
+					   												<input type = "radio" class="star star-5 col-sm-1 controls" id="star-4"   value="4"   required="required" disabled = "disabled"/>
+					    											<label class="star star-4 col-sm-1 controls" for="star-4"></label>
+					 												<input type = "radio" class="star star-5 col-sm-1 controls" id="star-3"   value="3"   required="required" checked = "checked" disabled = "disabled"/>
+					    											<label class="star star-3 col-sm-1 controls" for="star-3"></label>
+					     											<input type = "radio" class="star star-5 col-sm-1 controls" id="star-2"   value="2"   required="required" disabled = "disabled"/>
+					    											<label class="star star-2 col-sm-1 controls" for="star-2"></label>
+					    											<input type = "radio" class="star star-5 col-sm-1 controls" id="star-1"   value="1"   required="required" disabled = "disabled"/>
+					   										 		<label class="star star-1 col-sm-1 controls" for="star-1"></label>                                                            		
+                                                            	</a:if>
+                                                            	<a:if test="${i.star == '2' }">
+                                                            		<input type = "radio" class="star star-5 col-sm-1 controls" id="star-5"   value="5"   required="required" disabled = "disabled"/>
+					    											<label class="star star-5 col-sm-1 controls" for="star-5"></label>
+					   												<input type = "radio" class="star star-5 col-sm-1 controls" id="star-4"   value="4"   required="required" disabled = "disabled"/>
+					    											<label class="star star-4 col-sm-1 controls" for="star-4"></label>
+					 												<input type = "radio" class="star star-5 col-sm-1 controls" id="star-3"   value="3"   required="required" disabled = "disabled"/>
+					    											<label class="star star-3 col-sm-1 controls" for="star-3"></label>
+					     											<input type = "radio" class="star star-5 col-sm-1 controls" id="star-2"   value="2"   required="required" checked = "checked" disabled = "disabled"/>
+					    											<label class="star star-2 col-sm-1 controls" for="star-2"></label>
+					    											<input type = "radio" class="star star-5 col-sm-1 controls" id="star-1"   value="1"   required="required" disabled = "disabled"/>
+					   										 		<label class="star star-1 col-sm-1 controls" for="star-1"></label>
+                                                            		
+                                                            	</a:if>
+                                                            	<a:if test="${i.star == '1' }">
+                                                            		<input type = "radio" class="star star-5 col-sm-1 controls" id="star-5"   value="5"   required="required" disabled = "disabled"/>
+					    											<label class="star star-5 col-sm-1 controls" for="star-5"></label>
+					   												<input type = "radio" class="star star-5 col-sm-1 controls" id="star-4"   value="4"   required="required" disabled = "disabled"/>
+					    											<label class="star star-4 col-sm-1 controls" for="star-4"></label>
+					 												<input type = "radio" class="star star-5 col-sm-1 controls" id="star-3"   value="3"   required="required" disabled = "disabled"/>
+					    											<label class="star star-3 col-sm-1 controls" for="star-3"></label>
+					     											<input type = "radio" class="star star-5 col-sm-1 controls" id="star-2"   value="2"   required="required" disabled = "disabled"/>
+					    											<label class="star star-2 col-sm-1 controls" for="star-2"></label>
+					    											<input type = "radio" class="star star-5 col-sm-1 controls" id="star-1"   value="1"   required="required" checked = "checked" disabled = "disabled"/>
+					   										 		<label class="star star-1 col-sm-1 controls" for="star-1"></label>
+                                                            		
+                                                            	</a:if>
+                                                            </td>  
+                                                            <td>${i.feedbackDate }</td>
+                                                            <td>${i.feedbackTime }</td>                                                          
+                                                            <td><a href = "deleteFeedback?id=${i.feedbackId } "><button class = "btn-danger">Delete</button></a></td>
                                                         </tr>
+                                                        </a:forEach>
                                                         </tbody>
+                                                        
                                                     </table>
 
                                                 </div>
@@ -108,38 +183,38 @@
                    
              
         <!-- jQuery  -->
-        <script src="adminResources/js/jquery.min.js"></script>
-        <script src="adminResources/js/bootstrap.min.js"></script>
-        <script src="adminResources/js/modernizr.min.js"></script>
-        <script src="adminResources/js/detect.js"></script>
-        <script src="adminResources/js/fastclick.js"></script>
-        <script src="adminResources/js/jquery.slimscroll.js"></script>
-        <script src="adminResources/js/jquery.blockUI.js"></script>
-        <script src="adminResources/js/waves.js"></script>
-        <script src="adminResources/js/wow.min.js"></script>
-        <script src="adminResources/js/jquery.nicescroll.js"></script>
-        <script src="adminResources/js/jquery.scrollTo.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/detect.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/fastclick.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.slimscroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.blockUI.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/waves.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/wow.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.nicescroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.scrollTo.min.js"></script>
 
         <!-- Datatables-->
-        <script src="adminResources/js/jquery.dataTables.min.js"></script>
-        <script src="adminResources/js/dataTables.bootstrap.js"></script>
-        <script src="adminResources/js/dataTables.buttons.min.js"></script>
-        <script src="adminResources/js/buttons.bootstrap.min.js"></script>
-        <script src="adminResources/js/jszip.min.js"></script>
-        <script src="adminResources/js/pdfmake.min.js"></script>
-        <script src="adminResources/js/vfs_fonts.js"></script>
-        <script src="adminResources/js/buttons.html5.min.js"></script>
-        <script src="adminResources/js/buttons.print.min.js"></script>
-        <script src="adminResources/js/dataTables.fixedHeader.min.js"></script>
-        <script src="adminResources/js/dataTables.keyTable.min.js"></script>
-        <script src="adminResources/js/dataTables.responsive.min.js"></script>
-        <script src="adminResources/js/responsive.bootstrap.min.js"></script>
-        <script src="adminResources/js/dataTables.scroller.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.bootstrap.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.buttons.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/buttons.bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jszip.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/pdfmake.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/vfs_fonts.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/buttons.html5.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/buttons.print.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.fixedHeader.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.keyTable.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.responsive.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/responsive.bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/dataTables.scroller.min.js"></script>
 
         <!-- Datatable init js -->
-        <script src="adminResources/js/datatables.init.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/datatables.init.js"></script>
 
-        <script src="adminResources/js/app.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/app.js"></script>
              
 	
 	

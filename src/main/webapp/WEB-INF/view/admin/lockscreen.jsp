@@ -9,11 +9,11 @@
         <meta content="ThemeDesign" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="adminResources/images/favicon.ico">
+        <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/images/favicon.ico">
 
-        <link href="adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/icons.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/style.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/style.css" rel="stylesheet" type="text/css">
 
     </head>
 
@@ -27,12 +27,12 @@
 
                 <div class="panel-body">
                     <h3 class="text-center m-t-0 m-b-15">
-                        <a href="index.html" class="logo logo-admin"><img src="adminResources/images/logo_dark.png" height="28" alt="logo"></a>
+                        <a href="index.html" class="logo logo-admin"><img src="<%=request.getContextPath()%>/adminResources/images/logo_dark.png" height="28" alt="logo"></a>
                     </h3>
 
                     <form class="form-horizontal m-t-20" action="index.html">
                         <div class="user-thumb text-center m-b-30">
-                            <img src="adminResources/images/avatar-1.jpg" class="img-responsive img-circle img-thumbnail" alt="thumbnail">
+                            <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" class="img-responsive img-circle img-thumbnail" alt="thumbnail">
                         </div>
 
                         <div class="form-group">
@@ -61,19 +61,19 @@
 
 
         <!-- jQuery  -->
-        <script src="adminResources/js/jquery.min.js"></script>
-        <script src="adminResources/js/bootstrap.min.js"></script>
-        <script src="adminResources/js/modernizr.min.js"></script>
-        <script src="adminResources/js/detect.js"></script>
-        <script src="adminResources/js/fastclick.js"></script>
-        <script src="adminResources/js/jquery.slimscroll.js"></script>
-        <script src="adminResources/js/jquery.blockUI.js"></script>
-        <script src="adminResources/js/waves.js"></script>
-        <script src="adminResources/js/wow.min.js"></script>
-        <script src="adminResources/js/jquery.nicescroll.js"></script>
-        <script src="adminResources/js/jquery.scrollTo.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/detect.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/fastclick.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.slimscroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.blockUI.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/waves.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/wow.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.nicescroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.scrollTo.min.js"></script>
 
-        <script src="adminResources/js/app.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/app.js"></script>
 
     </body>
 </html>

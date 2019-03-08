@@ -3,8 +3,8 @@
                 <div class="topbar-left">
                     <!--<a href="index.html" class="logo"><span>Media</span>Bias</a>-->
                     <!--<a href="index.html" class="logo-sm"><span>U</span></a>-->
-                    <a href="index.jsp" class="logo"><img src="adminResources/images/logo.png" height="20" alt="logo"></a>
-                    <a href="index.jsp" class="logo-sm"><img src="adminResources/images/logo_sm.png" height="30" alt="logo"></a>
+                    <a href="index.jsp" class="logo"><img src="<%=request.getContextPath()%>/adminResources/images/logo.png" height="20" alt="logo"></a>
+                    <a href="index.jsp" class="logo-sm"><img src="<%=request.getContextPath()%>/adminResources/images/logo_sm.png" height="30" alt="logo"></a>
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->
                 <div class="navbar navbar-default" role="navigation">
@@ -71,7 +71,7 @@
                                 </li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                        <img src="adminResources/images/avatar-1.jpg" alt="user-img" class="img-circle">
+                                        <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="user-img" class="img-circle">
                                         <span class="profile-username">
                                             Admin-Drasti <span class="caret"></span>
                                         </span>
@@ -81,7 +81,7 @@
                                         <li><a href="javascript:void(0)"><span class="badge badge-success pull-right">5</span> Settings </a></li>
                                         <li><a href="javascript:void(0)"> Lock screen</a></li>
                                         <li class="divider"></li>
-                                        <li><a href="javascript:void(0)"> Logout</a></li>
+                                        <li><a href="../logout"> Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>

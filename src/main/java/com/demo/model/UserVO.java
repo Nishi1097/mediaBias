@@ -1,4 +1,4 @@
-package com.demo.model;
+/*package com.demo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,4 +31,4 @@ public class UserVO {
 	@Column(name = "loginForeignKey")
 	private LoginVO loginForeignKey;
 	
-}
+}*/

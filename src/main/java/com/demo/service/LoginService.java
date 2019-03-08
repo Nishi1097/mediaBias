@@ -19,5 +19,10 @@ public class LoginService {
 		
 		return loginDAO.login(loginVO);
 	}
-
+	
+	@Transactional
+	public List getUserByUsername(String username){
+		
+		return loginDAO.getUserByUsername(username);
+	}
 }

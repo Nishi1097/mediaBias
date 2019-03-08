@@ -12,24 +12,36 @@ import javax.persistence.Id;
 public class LoginVO {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "loginId")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;	
+	private int loginId;	
 		
-	public int getId() {
-		return id;
+	@Column(name = "username")
+	private String username;
+	
+	@Column(name = "password")
+	private String password;
+	
+	@Column(name = "enabled")
+	private int enabled;
+	
+	@Column(name = "role")
+	private String role;
+	
+	public int getLoginId() {
+		return loginId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setLoginId(int loginId) {
+		this.loginId = loginId;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -40,20 +52,22 @@ public class LoginVO {
 		this.password = password;
 	}
 
-	public String getStatus() {
-		return status;
+	public int getEnabled() {
+		return enabled;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setEnabled(int enabled) {
+		this.enabled = enabled;
 	}
 
-	@Column(name = "userName")
-	private String userName;
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	
-	@Column(name = "password")
-	private String password;
-	
-	@Column(name = "status")
-	private String status;
+		
 }

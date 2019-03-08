@@ -9,11 +9,11 @@
         <meta content="ThemeDesign" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="adminResources/images/favicon.ico">
+        <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/images/favicon.ico">
 
-        <link href="adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/icons.css" rel="stylesheet" type="text/css">
-        <link href="adminResources/css/style.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="<%=request.getContextPath()%>/adminResources/css/style.css" rel="stylesheet" type="text/css">
 	
     </head>
 
@@ -89,19 +89,19 @@
 
 
         <!-- jQuery  -->
-        <script src="adminResources/js/jquery.min.js"></script>
-        <script src="adminResources/js/bootstrap.min.js"></script>
-        <script src="adminResources/js/modernizr.min.js"></script>
-        <script src="adminResources/js/detect.js"></script>
-        <script src="adminResources/js/fastclick.js"></script>
-        <script src="adminResources/js/jquery.slimscroll.js"></script>
-        <script src="adminResources/js/jquery.blockUI.js"></script>
-        <script src="adminResources/js/waves.js"></script>
-        <script src="adminResources/js/wow.min.js"></script>
-        <script src="adminResources/js/jquery.nicescroll.js"></script>
-        <script src="adminResources/js/jquery.scrollTo.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/detect.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/fastclick.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.slimscroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.blockUI.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/waves.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/wow.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.nicescroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.scrollTo.min.js"></script>
 
-        <script src="adminResources/js/app.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/app.js"></script>
 
     </body>
 </html>
