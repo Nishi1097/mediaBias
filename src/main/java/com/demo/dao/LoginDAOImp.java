@@ -35,4 +35,11 @@ public class LoginDAOImp implements LoginDAO {
 		return q.list();
 	}
 
+	@Override
+	public void updatePassword(LoginVO loginVO) {
+		Session session = this.sessionFactory.getCurrentSession();
+		Query q = session.createQuery("update LoginVO set password = '"+loginVO.getPassword()+"' where username = '"+loginVO.getUsername()+"'");
+		q.executeUpdate();
+	}
+
 }

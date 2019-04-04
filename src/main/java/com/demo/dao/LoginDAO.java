@@ -10,4 +10,6 @@ public interface LoginDAO {
 
 	public List getUserByUsername(String username);
 
+	public void updatePassword(LoginVO loginVO);
+
 }

@@ -28,7 +28,7 @@ public class BaseMethods {
 		}
 
 		// Send mail to user
-		protected static void sendMail(String email, String subject , String content) {
+		public static void sendMail(String email, String subject , String content) {
 
 			java.util.Properties properties = new java.util.Properties();
 			properties.put("mail.smtp.auth", "true");
@@ -41,14 +41,14 @@ public class BaseMethods {
 				message.setContent(content, "text/html");
 				message.setSubject(subject);
 
-				InternetAddress sender = new InternetAddress("transense.28@gmail.com", "Study Portal");
+				InternetAddress sender = new InternetAddress("mediabias2019@gmail.com", "Media Bias");
 				InternetAddress receiver = new InternetAddress(email);
 				message.setFrom(sender);
 				message.setRecipient(Message.RecipientType.TO, receiver);
 				message.saveChanges();
 
 				javax.mail.Transport transport = mailSession.getTransport("smtp");
-				transport.connect("smtp.gmail.com", 587, "transense.28@gmail.com" , "Vaibhavi@288");
+				transport.connect("smtp.gmail.com", 587, "mediabias2019@gmail.com" , "MediaBias@123");
 				transport.sendMessage(message, message.getAllRecipients());
 				transport.close();
 
@@ -59,7 +59,7 @@ public class BaseMethods {
 		}
 
 		// Generate OTP
-		protected static int generateOTP(int limit) {
+		public static int generateOTP(int limit) {
 
 	        int otp = 0;
 

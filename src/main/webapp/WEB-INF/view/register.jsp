@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <label>Username</label>
-                                <b:input class="form-control" type="text" required="" placeholder="Username(Email)" path = "loginForeignKey.username"/>
+                                <b:input class="form-control" type="email" required="" placeholder="Username(Email)" path = "loginForeignKey.username"/>
                             </div>
                         </div>
                         

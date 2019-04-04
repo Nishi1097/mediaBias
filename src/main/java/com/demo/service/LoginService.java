@@ -25,4 +25,9 @@ public class LoginService {
 		
 		return loginDAO.getUserByUsername(username);
 	}
+	
+	@Transactional
+	public void updatePassword(LoginVO loginVO){
+		loginDAO.updatePassword(loginVO);
+	}
 }

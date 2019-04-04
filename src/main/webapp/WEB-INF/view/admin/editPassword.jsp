@@ -31,26 +31,39 @@
                     </h3>
                     <h4 class="text-muted text-center m-t-0"><b>Reset Password</b></h4>
 
-                    <form class="form-horizontal m-t-20" action="recoverPasswordStep2">
-
-                        <div class="alert alert-info alert-dismissible">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                            Enter your <b>Email</b> and instructions will be sent to you!
+                 <form class="pt-3"  action="recoverPasswordStep3" method="post">
+                <!-- <div class="form-group">
+                  <input type="email" class="form-control form-control-lg" name="username" placeholder="Username" path="username1">
+                </div> -->
+                 
+                  <div class="form-group">
+                  <div class="col-xs-12">
+                  <label>Enter OTP sent on your email</label>
+                  <input id="otp" type="text" class="form-control form-control-lg" placeholder="OTP" />
+                </div>
+                </div>
+                 																<span id="otpSpn"></span>
+                 
+                 		<div class="form-group">
+                            	<div class="col-xs-12">
+                                      <label>Password</label>
+                                      <input type="password" id="password" class="form-control" required="" placeholder="Password" name = "password"/>
+                                </div>
+                         </div>
+			
+						<div class="form-group">
+							<div class="col-xs-12">
+                                	<label>Confirm Password</label>
+                                	<input id = "confirmpassword" type="password" class="form-control" required="" data-parsley-equalto="#password" placeholder="Re-Type Password"/>
+                        	</div>
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-xs-12">
-                                <input class="form-control" type="email" required="" placeholder="Email" name = "email">
-                            </div>
-                        </div>
-
-                        <div class="form-group text-center m-t-30 m-b-0">
-                            <div class="col-xs-12">
-                                <button class="btn btn-primary btn-block btn-lg waves-effect waves-light" type="submit">Send Mail</button>
-                            </div>
-                        </div>
-
-                    </form>
+                
+                <br><br>
+                <div class="mt-3 form-group">
+                <input disabled="disabled" id="calculate" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" value="SUBMIT">
+                 <!--  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN IN</a> -->
+                </div>
+                </form>
                 </div>
 
             </div>
@@ -72,6 +85,35 @@
         <script src="<%=request.getContextPath()%>/adminResources/js/jquery.scrollTo.min.js"></script>
 
         <script src="<%=request.getContextPath()%>/adminResources/js/app.js"></script>
+        <script type="text/javascript" src="<%=request.getContextPath()%>/adminResources/js/parsley.min.js"></script>
+        <script type="text/javascript">
+		
+		var generatedOTP = <%=session.getAttribute("generatedOTP")%>;
+		
+		$("#otp").keyup(function(){
+			
+			
+			
+			if(generatedOTP == $("#otp").val()){
+				$("#otpSpn").html("OTP Matched.");
+				$("#otpSpn").css("color" , "green");
+				$("#otpSpn").css("font-weight" , "bold");
+				$("#calculate").attr("disabled" , false);
+			}
+			else{
+				$("#otpSpn").html("Wrong OTP.");
+				$("#otpSpn").css("color" , "red");
+				$("#otpSpn").css("font-weight" , "bold");
+				$("#calculate").attr("disabled" , true);
+			}
+			
+		});
+		</script>
+		<script type="text/javascript">
+            $(document).ready(function() {
+                $('form').parsley();
+            });
+        </script>
 
     </body>
 </html>

@@ -2,10 +2,10 @@ com\demo\controller\MainUserController.class
 com\demo\dao\LoginDAOImp.class
 com\demo\service\AdminComplaintService.class
 com\demo\service\UserRegisterService.class
-com\demo\controller\LoginProcessController.class
 com\demo\controller\UserComplaintController.class
 com\demo\dao\UserDAO.class
 com\demo\service\UserComplaintService.class
+com\demo\controller\LoginController.class
 com\demo\configuration\SecurityConfiguration.class
 com\demo\dao\LoginDAO.class
 com\demo\controller\MainController.class
