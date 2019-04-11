@@ -43,7 +43,7 @@
 
                     <div class="">
                         <div class="page-header-title">
-                            <h4 class="page-title">Dashboard</h4>
+                            <h4 class="page-title">Article List</h4>
                         </div>
                     </div>
 
@@ -62,20 +62,19 @@
                                                         <thead>
                                                         <tr>
                                                                  
-                                                            <th>Topic number</th>                                                       
-                                                            <th>Words assosiated with the topic</th>
+                                                            <th>Article No</th>                                                       
+                                                            <th>Article Title</th>
                                                             
                                                         </tr>
                                                         </thead>
 														
                                                         <tbody>
-                                                        <a:forEach items="${topicList }" var = "topicList">
+                                                        <a:set var="count" value="0" scope="page" />
+                                                        <a:forEach items="${articleList }" var = "articleList">
                                                         <tr>
-                                                                
-                                                            <td><a href = "articleBarGraph?topicNo=${topicList.topicNumber }">${topicList.topicNumber }</a></td>  
-                                                            <td>${topicList.topicWords }</td>                                                     
-                                                            
-                                                            
+                                                          	<a:set var="count" value="${count + 1}" scope="page"/>      
+                                                            <td>${count }</td>  
+                                                            <td><a href = "wordsChart?articleId=${articleList.articleId}">${articleList.articleTitle }</a></td>                                                                                                                                         
                                                         </tr>
                                                         </a:forEach>
                                                         </tbody>
@@ -89,9 +88,8 @@
                                 </div>
 
                             </div> <!-- End Row -->
-
                             
-                        <h3>You can click on the topic to further examine analysis</h3> 
+                        <h3>You can click on the article to further examine analysis</h3> 
                         </div><!-- container -->
 
 

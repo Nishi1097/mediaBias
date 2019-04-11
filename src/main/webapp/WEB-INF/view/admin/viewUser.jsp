@@ -71,8 +71,6 @@
                                                             <th>State</th>
                                                             <th>Email</th>
                                                             <th>Political Inclination</th>
-                                                            <th>Articles uploaded</th>
-                                                            <th>Articles reviewed</th>
                                                             <th>Delete User</th>
                                                         </tr>
                                                         </thead>
@@ -85,10 +83,8 @@
                                                             <td>${userList.gender }</td>
                                                             <td>${userList.age }</td>
                                                             <td>${userList.state }</td>
-                                                            <td>${userList.email }</td>
+                                                            <td>${userList.loginForeignKey.username }</td>
                                                             <td>${userList.politicalInclination }</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
                                                             <td><a href = "deleteUser?userId=${userList.registerId}"><button class = "btn-danger">Delete User</button></a></td>
                                                         </tr>
                                                         </a:forEach>

@@ -30,7 +30,7 @@
 
                 <div class="panel-body">
                     <h3 class="text-center m-t-0 m-b-15">
-                        <a href="index.jsp" class="text-center">Media Bias</a>
+                        <a href="index.jsp" class="text-center">Analysis of news articles</a>
                     </h3>
                     <h4 class="text-muted text-center m-t-0"><b>Sign In</b></h4>
 

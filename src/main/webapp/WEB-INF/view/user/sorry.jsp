@@ -20,7 +20,7 @@
 
     </head>
 
-
+	<%@taglib prefix="a" uri="http://java.sun.com/jsp/jstl/core" %>
     <body class="fixed-left">
 
         <!-- Begin page -->
@@ -37,13 +37,35 @@
 
             <!-- Start right Content here -->
 
-            
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+
+                    <div class="">
+                        <div class="page-header-title">
+                            <h4 class="page-title">Dashboard</h4>
+                        </div>
+                    </div>
+
+                    <div class="page-content-wrapper ">
+
+                        <div class="container">
+
+                        	<h2>${message }</h2>
+                             
+                        </div><!-- container -->
+
+
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+
                 <%@include file = "footer.jsp"%>
 
             </div>
             <!-- End Right content here -->
 
-        
+        </div>
         <!-- END wrapper -->
 
 

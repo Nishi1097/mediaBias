@@ -17,6 +17,10 @@
         <link href="<%=request.getContextPath()%>/adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="<%=request.getContextPath()%>/adminResources/css/icons.css" rel="stylesheet" type="text/css">
         <link href="<%=request.getContextPath()%>/adminResources/css/style.css" rel="stylesheet" type="text/css">
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
 
     </head>
 
@@ -43,7 +47,7 @@
 
                     <div class="">
                         <div class="page-header-title">
-                            <h4 class="page-title">Dashboard</h4>
+                            <h4 class="page-title">Graph</h4>
                         </div>
                     </div>
 
@@ -51,48 +55,78 @@
 
                         <div class="container">
 
-                        <div class="row">
-                                <div class="col-md-12">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-body">
-                                            <!-- <h4 class="m-b-30 m-t-0"></h4> -->
-                                            <div class="row">
-                                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <table id="datatable" class="table table-striped table-bordered">
-                                                        <thead>
-                                                        <tr>
-                                                                 
-                                                            <th>Topic number</th>                                                       
-                                                            <th>Words assosiated with the topic</th>
-                                                            
-                                                        </tr>
-                                                        </thead>
-														
-                                                        <tbody>
-                                                        <a:forEach items="${topicList }" var = "topicList">
-                                                        <tr>
-                                                                
-                                                            <td><a href = "articleBarGraph?topicNo=${topicList.topicNumber }">${topicList.topicNumber }</a></td>  
-                                                            <td>${topicList.topicWords }</td>                                                     
-                                                            
-                                                            
-                                                        </tr>
-                                                        </a:forEach>
-                                                        </tbody>
-                                                        
-                                                    </table>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div> <!-- End Row -->
-
-                            
-                        <h3>You can click on the topic to further examine analysis</h3> 
-                        </div><!-- container -->
+                     
+							<script src="<%=request.getContextPath()%>/adminResources/js/highcharts.js"></script>
+							<script src="<%=request.getContextPath()%>/adminResources/js/exporting.js"></script>
+							<script src="https://code.highcharts.com/highcharts.js"></script>
+							
+							
+							
+							<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fun" %>
+							
+							
+							<div id="container" style="height: 400px"></div>
+							
+							<script>
+							Highcharts.chart('container', {
+							
+							    chart: {
+							        type: 'column'
+							    },
+							
+							    title: {
+							        text: 'Number of Articles for topic: ${topic}'
+							    },
+							
+							    xAxis: {
+							        type: 'category'
+							    },
+							
+							    plotOptions: {
+							        series: {
+							            cursor: 'pointer',
+							            point: {
+							                events: {
+							                    click: function () {
+							                        location.href = 'articleList?list=' +
+							                            this.options.key;
+							                    }
+							                }
+							            }
+							        }
+							    },
+							
+							    series: [{
+								   	name: 'News Articles',
+									data: [{
+							        y: ${fun:length(quint)},
+							        name: 'Quint',
+							        key: '${quint}'
+							    }, {
+							        y: ${fun:length(firstpost)},
+							        name: 'FirstPost',
+							        key: '${firstpost}'
+							    }, {
+							        y: ${fun:length(opindia)},
+							        name: 'OPIndia',
+							        key: '${opindia}'
+							    }, {
+							        y: ${fun:length(thewire)},
+							        name: 'The Wire',
+							        key: '${thewire}'
+							    }, {
+							        y: ${fun:length(scroll)},
+							        name: 'Scroll',
+							        key: '${scroll}'
+							    }, {
+							        y: ${fun:length(catchnews)},
+							        name: 'Catch News',
+							        key: '${catchnews}'
+							    }]
+							}]
+							});
+							</script>
+	                        </div><!-- container -->
 
 
                     </div> <!-- Page content Wrapper -->
@@ -122,7 +156,7 @@
         <script src="<%=request.getContextPath()%>/adminResources/js/jquery.scrollTo.min.js"></script>
 
         <!--Morris Chart-->
-        <script src="<%=request.getContextPath()%>/adminResources/js/morris.min.js"></script>
+        <!-- <script src="<%=request.getContextPath()%>/adminResources/js/morris.min.js"></script> -->
         <script src="<%=request.getContextPath()%>/adminResources/js/raphael-min.js"></script>
 
         <script src="<%=request.getContextPath()%>/adminResources/js/dashborad.js"></script>

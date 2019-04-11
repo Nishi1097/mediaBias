@@ -3,8 +3,8 @@
                 <div class="topbar-left">
                     <!--<a href="index.html" class="logo"><span>Media</span>Bias</a>-->
                     <!--<a href="index.html" class="logo-sm"><span>U</span></a>-->
-                    <a href="index.jsp" class="logo"><img src="<%=request.getContextPath()%>/adminResources/images/logo.png" height="20" alt="logo"></a>
-                    <a href="index.jsp" class="logo-sm"><img src="<%=request.getContextPath()%>/adminResources/images/logo_sm.png" height="30" alt="logo"></a>
+                    <!-- <a href="index.jsp" class="logo"><img src="<%=request.getContextPath()%>/adminResources/images/logo.png" height="20" alt="logo"></a>
+                    <a href="index.jsp" class="logo-sm"><img src="<%=request.getContextPath()%>/adminResources/images/logo_sm.png" height="30" alt="logo"></a> -->
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->
                 <div class="navbar navbar-default" role="navigation">
@@ -18,14 +18,14 @@
                             </div>
 
                             <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="dropdown hidden-xs">
+                                <!-- <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light notification-icon-box" data-toggle="dropdown" aria-expanded="true">
                                         <i class="ion-ios7-bell"></i> <span class="badge badge-xs badge-danger">17</span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-lg">
                                         <li class="text-center notifi-title">Notification <span class="badge badge-xs badge-success">3</span></li>
                                         <li class="list-group">
-                                           <!-- list item-->
+                                           <!-- list item
                                            <a href="javascript:void(0);" class="list-group-item">
                                               <div class="media">
                                                   <i class="fa fa-diamond text-danger noti-sm-icon"></i>
@@ -37,7 +37,7 @@
                                                   </div>
                                               </div>
                                            </a>
-                                           <!-- list item-->
+                                           <!-- list item
                                             <a href="javascript:void(0);" class="list-group-item">
                                               <div class="media">
                                                   <i class="fa  fa-envelope-o text-primary noti-sm-icon"></i>
@@ -49,7 +49,7 @@
                                                   </div>
                                               </div>
                                             </a>
-                                            <!-- list item-->
+                                            <!-- list item
                                             <a href="javascript:void(0);" class="list-group-item">
                                                 <i class="fa fa-fighter-jet text-warning noti-sm-icon"></i>
                                                 <div class="noti-content">
@@ -59,26 +59,26 @@
                                                     </p>
                                                 </div>
                                             </a>
-                                           <!-- last list item -->
+                                           <!-- last list item
                                             <a href="javascript:void(0);" class="list-group-item">
                                               <small class="text-primary">See all notifications</small>
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light notification-icon-box"><i class="ion-qr-scanner"></i></a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                        <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="user-img" class="img-circle">
+                                        <!-- <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="user-img" class="img-circle"> -->
                                         <span class="profile-username">
-                                            Admin-Drasti <span class="caret"></span>
+                                            Admin <span class="caret"></span>
                                         </span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="javascript:void(0)"> Profile</a></li>
-                                        <li><a href="javascript:void(0)"><span class="badge badge-success pull-right">5</span> Settings </a></li>
+                                        <!-- <li><a href="javascript:void(0)"> Profile</a></li>
+                                        <li><a href="javascript:void(0)"><span class="badge badge-success pull-right">5</span> Settings </a></li> -->
                                         <li><a href="javascript:void(0)"> Lock screen</a></li>
                                         <li class="divider"></li>
                                         <li><a href="../logout"> Logout</a></li>

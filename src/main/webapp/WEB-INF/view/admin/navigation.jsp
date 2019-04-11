@@ -10,7 +10,7 @@
 
                     <div class="user-details">
                         <div class="text-center">
-                            <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="" class="img-circle">
+                            <!-- <img src="<%=request.getContextPath()%>/adminResources/images/avatar-1.jpg" alt="" class="img-circle"> -->
                         </div>
                         <div class="user-info">
                             <div class="dropdown">
@@ -19,8 +19,6 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Admin <span class="caret"></span></a>                                
                 
                                 <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"> Profile</a></li>
-                                    <li><a href="javascript:void(0)"> Settings</a></li>
                                     <li><a href="javascript:void(0)"> Lock screen</a></li>
                                     <li class="divider"></li>
                                     <li><a href="../logout"> Logout</a></li>
@@ -60,18 +58,18 @@
                                 </ul>
                             </li> -->
 
-                            <li class="has_sub">
+                            <!-- <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-pencil-alt"></i><span> Forms </span><span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="list-unstyled">
-                                   <!-- <li><a href="form-elements.jsp">General Elements</a></li>
+                                   <li><a href="form-elements.jsp">General Elements</a></li>
                                     <li><a href="form-advanced.jsp">Advanced Form</a></li>
                                     <li><a href="form-editors.jsp">Form Editors</a></li>                                    
                                     <li><a href="form-mask.jsp">Form Mask</a></li>
-                                    <li><a href="form-xeditable.jsp">Form Xeditable</a></li>-->
+                                    <li><a href="form-xeditable.jsp">Form Xeditable</a></li>
                                     <li><a href="formValidation.jsp">Form Validation</a></li>
                                     <li><a href="formUpload.jsp">Multiple File Upload</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
 
                             <!-- <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-spray"></i> <span> User Interface </span> <span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
@@ -92,15 +90,15 @@
                                 <a href="typography.jsp" class="waves-effect"><i class="ti-text"></i><span> Typography <span class="badge badge-primary pull-right">4</span></span></a>
                             </li> -->
 
-                            <li class="has_sub">
+                            <!-- <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-list"></i><span> Tables </span><span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="list-unstyled">
-                                 <!-- <li><a href="tables-basic.jsp">Basic Tables</a></li>                                
+                                 <li><a href="tables-basic.jsp">Basic Tables</a></li>                                
                                     <li><a href="tables-responsive.jsp">Responsive Table</a></li>
-                                    <li><a href="tables-editable.jsp">Editable Table</a></li> -->
+                                    <li><a href="tables-editable.jsp">Editable Table</a></li> 
                                     <li><a href="dataTable.jsp">Data Table</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
 
                             <!-- <li class="menu-title">Extras</li> -->
 
@@ -116,7 +114,7 @@
                                 <a href="calendar.jsp" class="waves-effect"><i class="ti-calendar"></i><span> Calendar </span></a>
                             </li> -->
 
-                            <li class="has_sub">
+                            <!--<li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-files"></i><span> Pages </span><span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="timeline.jsp">Timeline</a></li>
@@ -126,11 +124,11 @@
                                     <li><a href="register.jsp">Register</a></li>
                                     <li><a href="recoverPassword.jsp">Recover Password</a></li>
                                     <li><a href="lockscreen.jsp">Lock Screen</a></li>
-                                <!--<li><a href="pages-blank.jsp">Blank Page</a></li>-->
+                                	<li><a href="pages-blank.jsp">Blank Page</a></li>
                                     <li><a href="error404.jsp">Error 404</a></li>
                                     <li><a href="error500.jsp">Error 500</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
                             
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-user"></i><span> Users </span><span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
@@ -147,12 +145,12 @@
                                 </ul>
                             </li>
                             
-                            <li class="has_sub">
+                            <!-- <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-user"></i><span> Data Set </span><span class="pull-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="dataSet">View and Manage Data</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
 							
 											
                             <!-- <li>
